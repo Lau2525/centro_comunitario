@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quienes somos </title>
+
+
+    <style>
+
+        /*Para todo el html*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        body{
+            background-color: white;
+            min-height: 100%;
+        }
+
+        html{
+            height: 100%;
+        }
+
+        /*Header*/
+        
+        .container{
+            display: flex;
+            flex-direction: row;
+            gap: 250px;
+            margin: 15px;
+            justify-content:flex-start; 
+        }
+
+        a{
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            text-shadow: rgba(0, 26, 9, 0.247) 4px 4px 4px;
+            
+        }
+        a:hover{
+            color: rgb(1, 167, 56);
+
+        }
+
+
+
+        /*main*/
+
+        #Banner{
+            width: 100%;
+            height:500px;
+            padding: 10px 40px 10px 40px;
+            margin-top: 20px;
+
+        }
+
+
+        .titulo{
+            font-size: 15px;
+            font-weight: bold;
+            padding:10px 40px 10px 40px;
+
+        }
+
+        .texto {
+            margin-bottom:10px;
+            padding:10px 40px 10px 40px;
+            text-align: justify;
+        } 
+
+        h3{
+            margin: 0px 0px 0px 0px;
+            padding:20px 40px 20px 40px;
+        }
+
+
+        /*Empezar a acomodar mi cajita*/
+
+        .grid-container >*{
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        .header{
+            grid-area: header;
+            background-color: rgba(223, 255, 184, 0.678);
+            width: 100%;
+            height: 160px;
+        }
+
+        .navbar{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            grid-area: navbar;
+            background-color: rgb(255, 128, 198);
+            width: 100%;
+            height: 42px;
+            border-radius: 30px;
+            margin-top: 51px;
+        }
+
+
+
+        .main{
+            grid-area: main;
+            
+        }
+
+
+        .container-mision{
+            grid-area: container-mision;
+            margin-bottom: 10px;
+            
+        }
+
+        .container-vision{
+            grid-area: container-vision;
+            margin-bottom: 10px;
+            
+        }
+        .footer{
+            grid-area: footer;
+            
+        }
+
+        /*Teléfono*/
+
+        .grid-container{
+            display:grid;
+            gap:10px;
+            grid-template-areas: 
+            "header"
+            "navbar"
+            "main"
+            "container-mision"
+            "container-vision"
+            "footer";
+        }
+
+        /*Para tablet*/
+
+        @media(min-width:768px){
+            .grid-container{
+                grid-template-columns: 200px auto;
+                grid-template-rows: 100px 100px auto 250px; /*900px -> debo dar la altura suficiente para que mis elementos quepan aquí, en este caso tengo una imagen de 500px y un texto, si aquí pongo un número menor mis elementos se va a sobreponer*/
+
+                grid-template-areas: 
+                "header header"
+                "navbar navbar"
+                "main main"
+                "container-mision container-vision"
+                "footer footer";
+            }
+        }
+
+        /*Para Desktop*/
+
+        @media(min-width:900px){
+            .grid-container{
+                grid-template-columns: 200px auto;
+                grid-template-rows:100px 100px auto 250px;
+                grid-template-areas: 
+                "header header header"
+                "navbar navbar navbar"
+                "main main main"
+                "container-mision container-mision container-vision "
+                "footer footer footer";
+            }
+        }
+
+
+
+        /*footer*/
+
+
+
+    .card{
+        background-color: rgb(195, 152, 235);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .card p{
+        text-align: justify;
+        padding-left: 25px;
+        }
+
+    .card2{
+        background-color: rgb(195, 152, 235);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .card2 p{
+        text-align: justify;
+        padding-left: 25px;
+        }
+
+    .card3{
+        background-color: rgb(195, 152, 235);
+        padding: 20px;
+        margin-right: 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .card3 p{
+        text-align: justify;
+        padding-left: 10px;
+    }       
+    
+    .containerfooter{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        width: 100%;
+    } 
+
+    .button{
+        background-color: rgb(81, 160, 160);
+        color: blueviolet;
+        padding: 10px 20px;
+    }
+
+    .iconos{
+        display: flex;
+        align-items: center;
+        justify-content:space-between; 
+    }
+
+    @keyframes logo{
+        from{
+            opacity: 1;
+            }
+        to{
+            opacity: 0;
+            }
+
+    }
+        
+    .logofooter{
+        animation-name: logo;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        width:70px;
+        height:70px;
+    }
+
+
+</style>
+
+
+</head>
+
+<body class="grid-container">
+    
+    <header class="header">
+        
+        <div class="container">
+        
+            <div class="Logo">
+            <img src="./src/Images/Logo1.png" alt="Logo1" width="100px" height="100px">
+            </div>
+        
+            <div class="NumeroRecuadro"
+                    style="display: flex;
+                    flex-direction: raw;
+                    gap: 40px";>
+                <div>
+                <!---Logos de telefono-->
+                    <img style="margin: 20px 0px 0px 0px;"
+                        src="./src/Images/telefonoGrande.png" alt="Logo" width="80px" height="75px">
+                </div>
+            
+                <div class="Numero">
+                <!---Número de emegencia-->
+                    <h5>Número de emergencia</h5>
+                    <h1>55 19 28 37 64</h1>
+                    <img src="./src/Images/Whatsapp.webp" alt="whatsApp" width="32px" height="32px">
+                    <img src="./src/Images/TelefonoChico.png" alt="Llamada" width="30px" height="30px">
+                    <h3>Horario: <strong>24 HRS</strong> Lunes a Domingo</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    
+    <nav class="navbar">
+        <a href="./index.html"><strong>Inicio</strong></a>
+        <a href=""><strong>Servicios de acompañamiento <br> y asesoramiento</strong></a>
+        <a href=""><strong>Cursos y talleres</strong></a>
+        <a href=""><strong>Emergencia</strong></a>
+        <a href=""><strong>¿Quiénes somos?</strong></a>
+    </nav>
+
+    
+    <main class="main">
+    
+        <img id = "Banner" src="./src/Images/NOMAS.webp" >  
+
+
+        <div class="container-refugio">
+
+            <h3>Refugio de abrazos</h3>
+            
+            <p class="texto">
+
+                    Refugio de abrazos es una organización no gubernamental, sin ánimo de lucro, creada en 2023. Esta constituida por activistas y demás colectivos que defienden los derechos de las mujeres y buscan su indepencia ecónomica y progreso hacía una vida libre de violencia.
+                    La violencia en contra de las mujeres es cualquier acción u omisión, basada en su género, que les cause daño o sufrimiento psicológico, físico, patrimonial, económico, sexual o la muerte en el ámbito privado como en el público. 
+                    <br>
+                    <br>
+                    La violencia hacía las mujeres y las niñas es, desafortunadamente, una situación común, pero no por eso es una conducta válida o que tenga que justificarse. Desde niñas nos enseñan que hay ciertas "consuctas permitidas" para los hombres y para las mujeres, dentro de las cuales se encuentra la violencia.
+                    Esa misma idea nos lleva a no denunciar la violencia ya que al estar cada día expuestas a diferentes tipos de violencia hemos parendido a ignorarla, o fingir que no existe o que es menor.
+                
+            
+
+        </div>
+
+    </main>
+
+    <article class="container-mision">
+
+        <p class="titulo">Misión</p>
+
+        
+        <p class="texto">
+            Refugio de Abrazos entiende la importancia de contar con herramientas para salir adelante, así como la necesidad de impulsar mujeres independientes, empoderadas y capaces para poder identificar y salir de relaciones violentas. Es por ello que trabaja con las víctimas de violencia sexual o malos tratos prestando gratuitamente la información y asistencia que necesiten. <br><br> Buscamos ser parte del cambio a través de la sensibilización, prevención y denuncia de las situaciones de violencia contra las mujeres.
+        </p>
+        
+
+    </article>
+
+    <article class="container-vision">
+
+        <p class="titulo">Visión</p>
+
+        
+        <p class="texto">
+            Refugio de Abrazos busca ser un agente de cambio social, comprometido con la igualdad de género y el logro de una sociedad igualitaria. <br> <br>
+            
+            Busca ser un parteaguas en distintos ámbitos de la vida de las mujeres víctimas de violencia, que apoye los procesos de empoderamiento de las mujeres y sea reconocido por las mismas como un centro de apoyo a sus proyectos personales y laborales, así como en la defensa de sus derechos.
+        </p>
+        
+
+    </article>
+
+
+    <footer class="footer">
+
+            <div class="containerfooter">
+                <div class="card"> 
+                <h4>Refugio de abrazos</h4>
+                <div class="boton">
+                <button class="button"> Contacta con Nosotros</button> 
+            </div>
+                <br>
+                <img src="./src/Images/Logo2.png" width="100" height="100">
+                <br>
+            
+                <form class="form1" action="Register"> 
+                
+                    <label for="Register">Nombre:</label>
+                    <input type="text" placeholder="maria">
+                    <br>
+                    <br>
+                
+                    <label for="Register">Apellido:</label>
+                    <input type="text" placeholder="perez">
+                    <br>
+                    <br>
+                    <label for="Register">Correo electronico:</label>
+                    <input id="email" type="email" placeholder="123@gmail.com">
+                    <br>
+                    <br>
+                    <label for="Register">Tú consulta:</label>
+                    <input id="consulta" placeholder="text">
+                    <br>
+                    <br>
+                
+                <div class="boton">
+                    <button class="button"> ENVIAR</button> 
+                </div>
+                </form>
+            <br>
+            <br>
+            </div>
+                    <div class="card2"> 
+            <h4>
+                <div class="boton">
+                    <button class="button"> AVISO DE PRIVACIDAD </button> 
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="boton">
+                    <button class="button"> AVISO LEGAL </button> 
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="boton">
+                    <button class="button"> POLITICA DE COOKIES </button> 
+                </h4>
+                <br>
+                <br>
+                <br>
+                <br>
+                <img src="https://www.pngkey.com/png/full/935-9352373_click-picture-click-icon-png-free.png " alt="manita de click" width="90" height="90">
+            
+            
+                    </div>
+            
+                <div class="card3"> 
+                <p><h4>CUENTA CON NOSOTROS</h4></p>
+                <br>
+                <div class="iconos">
+                <img src="https://cdn2.iconfinder.com/data/icons/funky/64/Facebook-1-512.png" alt="face" width="40" height="25"> <img src="https://www.mappingmegan.com/wp-content/uploads/2017/01/twitter-logo-png-transparent-background-twitter-transparent-logo-png.png" alt="twitter" width="35" height="30"><img src="https://www.internetmatters.org/wp-content/uploads/2020/01/instagradientlogo-no-background.png" alt="insta" width="60" height="30">
+            </div>
+            <br>
+                <br> <h6>
+                <p> <b>🌐Dirección:</b> <br>
+                Av. Alemania #55, <br>
+                Col. Las Europas <br>
+                cp.34567
+                <br>
+                <br>
+                <p> <b>📞Teléfono:</b> <br>
+                (52) 33456-7890</p>
+                <br>
+                <p> <b>💻 Email: <br>
+                </b>contact@refugiodeabrazos.org</p>
+                <br>
+                <a href="#contacto">Contacto</a> | <a href="#servicios">Servicios</a> | <a href="#nosotros">Sobre Nosotros</a>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+                <p> 2023 Centro Comunitario de Ayuda para Mujeres "REFUGIO DE ABRAZOS". </p>
+                </h6>
+                <br>
+                <footer class="footer">
+                <img class="logofooter" src="./src/Images/Logo2.png">
+                </footer>
+            </div>
+    
+
+    </footer>
+</body>
+
+</html>
