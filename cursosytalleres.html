@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/Images/Logo2.png" type="imagen de reloj">
+    <title>Cursos y Talleres</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+        }
+        body{
+        min-height: 100%;
+    }
+    html{
+        height: 100%;
+    }
+    .grid-container > *{
+text-align: center;
+border-radius: 15px;
+padding: 10px;
+    }
+    .header{
+            grid-area: header;
+            background-color: rgb(215, 247, 219);
+        }
+        .navbar{
+            grid-area: navbar;
+            background-color: rgb(255, 167, 215);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: auto;
+            height: 42px;
+            border-radius: 20px;
+            margin: 0px 20px 0px 20px;
+    }
+    a{
+            text-align: center;
+            color: black;
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(2, 167, 2);
+        }
+    .sidebar{
+        grid-area: sidebar; 
+        background-color:bisque
+    }
+    .main{
+        grid-area: main; 
+        background-color:rgb(237, 218, 240)
+    }
+    .tabla{
+            grid-area: tabla;
+        }
+    .footer{
+        grid-area: footer; 
+        
+    }
+   
+    /*Teléfono*/
+    .grid-container{
+        display: grid;
+        gap:10px;
+        grid-template-areas:
+        "header"
+        "navbar"
+        "main"
+        "sidebar"
+        "footer"
+        ;
+    }
+    /*Para tablet*/
+    @media(min-width:768px){
+        .grid-container{
+        grid-template-columns:200px auto;
+        grid-template-rows:100px 50px auto 100px;
+        grid-template-areas:
+        "header header"
+        "nabvar navbar"
+        "sidebar main"
+        "footer footer";
+    }    
+        .container{
+        grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    /*Para escritorio*/
+    @media(min-width:900px){
+        .grid-container{
+        grid-template-columns:200px auto;
+        grid-template-rows:100px 50px auto 100px;
+        grid-template-areas:
+        "header header header"
+        "nabvar navbar navbar"
+        "sidebar sidebar main"
+        "footer footer footer"
+
+    }    
+    .container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}  
+@keyframes logo{
+                from{
+                    opacity: 1;
+                }
+                to{
+                    opacity: 0;
+                }
+
+                }
+        .logo{
+            animation-name: logo;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+.card{
+            background-color: rgb(195, 152, 235);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+    }
+
+           .card p{
+            text-align: justify;
+            padding-left: 25px;
+           }
+
+    .card2{
+            background-color: rgb(195, 152, 235);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+    }
+    .card2 p{
+            text-align: justify;
+            padding-left: 25px;
+        }
+        .card3{
+            background-color: rgb(195, 152, 235);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+    }
+    .card3 p{
+            text-align: justify;
+            padding-left: 10px;
+        }       
+         .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            width: 100%;
+    }
+    .container1{
+            display: flex;
+            flex-direction: row;
+            gap: 250px;
+            margin: 15px;
+            justify-content:flex-start; 
+        }   
+    .button{
+      background-color: azure;
+      color: blueviolet;
+      padding: 10px 20px;
+    }
+    .iconos{
+      display: flex;
+  align-items: center;
+  justify-content:space-between; 
+}
+
+    </style>
+    
+</head>
+<body class="grid-container">
+          <header class="header">
+              <div class="container1">
+      
+                  <div class="Logo">
+                      <!---Logo inicial-->
+                  <img src="./src/Images/Logo2.png" alt="Logo1" width="100px" height="100px">
+                  </div>
+          
+                  <div class="NumeroRecuadro"
+                  style="display: flex;
+                  flex-direction: row;
+                  gap: 30px";>
+                      <div>
+                          <!---Logos de telefono-->
+                      <img style="margin: 20px 0px 0px 0px;"
+                      src="./src/Images/telefonoGrande.png" alt="Logo" width="80px" height="75px">
+                      </div>
+          
+                      <div class="Numero">
+                      <!---Número de emegencia-->
+                      <h5>Número de emergencia</h5>
+                      <h1>55 19 28 37 64</h1>
+                      <img src="./src/Images/Whatsapp.webp" alt="whatsApp" width="32px" height="32px">
+                      <img src="./src/Images/TelefonoChico.png" alt="Llamada" width="30px" height="30px">
+                      <h3>Horario: <strong>24 HRS</strong> Lunes a Domingo</h3>
+                      </div>
+                  </div>
+              </div>
+      
+          </header>
+      
+          <nav class="navbar">
+      
+              <a href="./index.html"><strong>Inicio</strong></a>
+              <a href=""><strong>Servicios de acompañamiento <br> y asesoramiento</strong></a>
+              <a href=""><strong>Cursos y talleres</strong></a>
+              <a href=""><strong>Emergencia</strong></a>
+              <a href=""><strong>¿Quiénes somos?</strong></a>
+              
+          </nav>
+
+      </body>
+    </nav>
+    <aside class="sidebar">
+        <div id="masinformacion1">
+            <div class="aside">
+              <h2>¿Cuáles son nuestros cursos?</h2>
+            </div>
+            <div class="uno">
+            <h3>Desarrolla tu autoestima</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ullam! Recusandae numquam fugit corporis quisquam, porro iure reprehenderit ducimus, deleniti natus asperiores nulla perferendis omnis. Vero earum accusamus modi velit.</p>
+            <img src="./src/Images/autoestima.jpeg" alt="">
+            </div>
+            <br>
+            <div class="dos">
+            <h3>Empoderamiento femenino</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ullam! Recusandae numquam fugit corporis quisquam, porro iure reprehenderit ducimus, deleniti natus asperiores nulla perferendis omnis. Vero earum accusamus modi velit.</p>
+            <img src="./src/Images/empoderamiento.jpeg" alt="">
+            </div>
+            <br>
+            <div class="tres">
+            <h3>Emprendimiento para Mujeres</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ullam! Recusandae numquam fugit corporis quisquam, porro iure reprehenderit ducimus, deleniti natus asperiores nulla perferendis omnis. Vero earum accusamus modi velit.</p>
+            <img src="./src/Images/emprendimiento.jpeg" alt="">
+            </div>
+            <br>
+            <div class="cuatro">
+            <h3>Organización personal</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ullam! Recusandae numquam fugit corporis quisquam, porro iure reprehenderit ducimus, deleniti natus asperiores nulla perferendis omnis. Vero earum accusamus modi velit.</p>
+            <img src="./src/Images/organizacion.jpeg" alt="" height="600px">
+            </div>
+        </div>
+        <div id="masinformacion2">
+            <aside class="aside">
+              <h2>¿Cuáles son nuestros talleres?</h2>
+            <div class="uno">
+          <h3>Tejido</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ullam! Recusandae numquam fugit corporis quisquam, porro iure reprehenderit ducimus, deleniti natus asperiores nulla perferendis omnis. Vero earum accusamus modi velit.</p>
+          <img src="./src/Images/tejido.jpeg" alt="" height="600px">
+            </div>
+            <div class="dos">
+          <h3>Finanzas personales</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ullam! Recusandae numquam fugit corporis quisquam, porro iure reprehenderit ducimus, deleniti natus asperiores nulla perferendis omnis. Vero earum accusamus modi velit.</p>
+          <img src="./src/Images/finanzas.jpeg" alt="">
+            </div>
+            <div class="tres">
+          <h3>Piñatas</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ullam! Recusandae numquam fugit corporis quisquam, porro iure reprehenderit ducimus, deleniti natus asperiores nulla perferendis omnis. Vero earum accusamus modi velit.</p>
+          <img src="./src/Images/piñata.JPG" alt="" height="600">
+            </div>
+            <div class="cuatro">
+          <h3>Costura y diseño</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ullam! Recusandae numquam fugit corporis quisquam, porro iure reprehenderit ducimus, deleniti natus asperiores nulla perferendis omnis. Vero earum accusamus modi velit.</p>
+          <img src="./src/Images/costura.jpeg" alt="" height="600px">
+            </div>
+          </aside>
+      </div>
+    </aside>
+    <article class="main">
+        <div class="cursos"> 
+            <img src="./src/Images/Download premium image of Group of diverse people holding hands up in the air by Felix about group therapy, relief, addiction, advice, and african american 2027952.jpeg" alt="" width="100px" height="150px">
+            <H1>Cursos</H1>
+            <p>En nuestro centro comunitario Refugio de Abrazos, te inivtamos a participar en una serie de cursos diseñados para fortalecer tu autoestima, autoconfianza y tu seguridad a través de actividades en las que podrás desarollar tus habilidades emprendedoras. Nuestra misión es que te conviertas en a mejor versión de ti misma y alcances tus metas persolaes y profesionales. </p>
+            <ul>
+                <li>Desarrolla tu autoestima</li>
+                <li>Empoderamiento femenino</li>
+                <li>Emprendimiento para Mujeres</li>
+                <li>Organización personal</li>
+            </ul>
+            <a href="#masinformacion1"><button>Más Información</button></a>
+         </div>
+          <br/>
+          <div class="talleres">
+            <img src="./src/Images/08d0eb4f-2678-4132-8c22-0641d58bc6e1.JPG" alt="" width="200px" height="150px">
+            <h1>Talleres</h1>
+            <p>En nuestro centro comunitario Refugio de Abrazos, te inivtamos a participar en una serie de talleres diseñados para fortalecer tu autoestima, autoconfianza y tu seguridad a través de actividades en las que podrás desarollar tus habilidades emprendedoras. Nuestra misión es que te conviertas en a mejor versión de ti misma y alcances tus metas persolaes y profesionales.
+            </p>
+            <ul>
+                <li>Tejido</li>
+                <li>Finanzas personales</li>
+                <li>Piñatas</li>
+                <li>Costura y diseño</li>
+            </ul>
+            <a href="#masinformacion2"><button>Más Información</button></a>
+        </div>
+    </article>
+    <footer class="footer">
+        <div class="container">
+            <div class="card"> 
+            <h4>Refugio de abrazos</h4>
+            <div class="boton">
+              <button class="contacta" style="background-color: rgb(81, 160, 160); color: blueviolet;padding: 10px 20px;"> Contacta con Nosotros</button> 
+          </div>
+            <br>
+            <img src="./src/Images/Logo2.png" width="100" height="100">
+            <br>
+          
+            <form class="form1" action="Register"> 
+              
+                <label for="Register">Nombre:</label>
+                <input type="text" placeholder="maria">
+                <br>
+                <br>
+              
+                <label for="Register">Apellido:</label>
+                <input type="text" placeholder="perez">
+                <br>
+                <br>
+                <label for="Register">Correo electronico:</label>
+                <input id="email" type="email" placeholder="123@gmail.com">
+                <br>
+                <br>
+                <label for="Register">Tú consulta:</label>
+                <input id="consulta" placeholder="text">
+                <br>
+                <br>
+              
+            <div class="boton">
+                <button class="enviar" style="background-color: rgb(81, 160, 160); color: blueviolet;padding: 10px 20px;"> ENVIAR</button> 
+            </div>
+            </form>
+          <br>
+          <br>
+          </div>
+                <div class="card2"> 
+          <h4>
+              <div class="boton">
+                <button class="AVISO DE PRIVACIDAD" style="background-color: rgb(81, 160, 160); color: blueviolet;padding: 10px 20px;"> AVISO DE PRIVACIDAD </button> 
+            </div>
+              <br>
+              <br>
+              <br>
+              <div class="boton">
+                <button class="AVISO LEGAL" style="background-color: rgb(81, 160, 160); color: blueviolet;padding: 10px 20px;"> AVISO LEGAL </button> 
+              <br>
+              <br>
+              <br>
+              <br>
+              <div class="boton">
+                <button class="POLITICA DE COOKIES" style="background-color: rgb(81, 160, 160); color: blueviolet;padding: 10px 20px;"> POLITICA DE COOKIES </button> 
+            </h4>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="https://www.pngkey.com/png/full/935-9352373_click-picture-click-icon-png-free.png " alt="manita de click" width="90" height="90">
+          
+          
+                </div>
+          
+              <div class="card3"> 
+            <p><h4>CUENTA CON NOSOTROS</h4></p>
+            <br>
+            <div class="iconos">
+            <img src="https://cdn2.iconfinder.com/data/icons/funky/64/Facebook-1-512.png" alt="face" width="40" height="25">  <img src="https://www.mappingmegan.com/wp-content/uploads/2017/01/twitter-logo-png-transparent-background-twitter-transparent-logo-png.png" alt="twitter" width="35" height="30"><img src="https://www.internetmatters.org/wp-content/uploads/2020/01/instagradientlogo-no-background.png" alt="insta" width="60" height="30">
+          </div>
+          <br>
+            <br> <h6>
+            <p> <b>🌐Dirección:</b> <br>
+              Av. Alemania #55, <br>
+              Col. Las Europas <br>
+              cp.34567
+            <br>
+            <br>
+            <p> <b>📞Teléfono:</b> <br>
+              (52) 33456-7890</p>
+            <br>
+            <p> <b>💻 Email: <br>
+            </b>contact@refugiodeabrazos.org</p>
+            <br>
+            <a href="#contacto">Contacto</a> | <a href="#servicios">Servicios</a> | <a href="#nosotros">Sobre Nosotros</a>
+          <br>
+          <br>
+          <br>
+          <br>
+          
+            <p>&copy; 2023 Centro Comunitario de Ayuda para Mujeres "REFUGIO DE ABRAZOS". </p>
+            </h6>
+            <br>
+            <footer class="footer">
+              <img class="logo" src="./RCS/Logo2.png" width="70" height="70"></footer>
+              </footer>
+          </div>
+    </footer>
+</body>
+</html>
