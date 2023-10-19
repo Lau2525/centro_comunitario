@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       rel="shortcut icon"
       href="./src/Images/Logo2.png"
@@ -15,12 +15,12 @@
         box-sizing: border-box;
         padding: 0;
         margin: 0;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-          sans-serif;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
 
       body {
         min-height: 100%;
+        
       }
 
       html {
@@ -71,27 +71,35 @@
         grid-area: main;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
         text-align: center;
         border: 15px;
         padding: 15px;
+        font-size: 30px;
+      }
+      .main img{
+        max-width: 100%;
       }
       .article {
         grid-area: article;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         background: rgb(211,187,221);
         background: linear-gradient(90deg, rgba(211,187,221,1) 20%, rgba(255,127,219,1) 100%);
-        flex-grow: 1;
+        border: 15px;
         padding: 30px;
         margin: 15px;
-        text-align:justify;
         border-radius: 50px;
+        font-size: 30px;
       }
 
       .box {
         background-color: rgba(250,250,250,.35);
-        padding: 50px;
+        padding: 4%;
         margin: 15px;
         border-radius: 30px;
+        text-align:start;
       }
 
       .footer {
@@ -185,17 +193,19 @@
           "header"
           "navbar"
           "main"
+          "article"
           "footer";
       }
       /*Tablet*/
       @media (min-width: 768px) {
         .grid-container {
           grid-template-columns: 200px auto;
-          grid-template-rows: 160px 50px auto 100px;
+          grid-template-rows: 160px 50px auto auto;
           grid-template-areas:
             "header header"
             "navbar navbar"
             "main main"
+            "article article"
             "footer footer";
         }
       }
@@ -203,11 +213,12 @@
       @media (min-width: 900px) {
         .grid-container {
           grid-template-columns: 200px auto;
-          grid-template-rows: 160px 50px auto 100px;
+          grid-template-rows: 160px 50px auto auto;
           grid-template-areas:
             "header header header"
             "navbar navbar navbar"
             "main main main"
+            "article article article"
             "footer footer footer";
         }
       }
@@ -292,60 +303,61 @@
           alt="imagen de acompañamiento"
         />
       </div>
-      <article class="article">
-        <div class="box">
-            <h3>ACOMPAÑAMIENTO EMOCIONAL</h3>
-        <p>
-          El acompañamiento emocional en situaciones de violencia de género es
-          esencial ya que brinda apoyo, comprensión y contención a las víctimas.
-          Ayuda a mitigar el impacto psicológico de la violencia, promueve la
-          recuperación emocional, y contribuye a romper el ciclo de abuso al
-          fomentar la autoestima, la confianza y el empoderamiento de las
-          víctimas, permitiéndoles tomar decisiones informadas y buscar ayuda
-          para poner fin a la violencia.
-        </p>
-        <br />
-        <p>Lo que ofrecemos de acompañamiento.</p>
-        <br />
-        <ul>
-          <li>Acompañamiento psicológico individual</li>
-          <li>Grupo de apoyo terapéutico</li>
-          <li>Terapia familiar y de pareja</li>
-          <li>Talleres de autoestima</li>
-        </ul>
-        </div>
-      </article>
-      <article class="article">
-        <div class="box">
-            <h3>ASESORAMIENTO LEGAL</h3>
-        <p>
-          El acompañamiento legal en casos de violencia de género es esencial
-          para asesorar a las víctimas, proteger sus derechos y llevar a los
-          agresores ante la justicia. Ayuda a empoderar a las víctimas y a
-          garantizar su seguridad y acceso a la justicia.
-        </p>
-        <br />
-        <p>Lo que ofrecemos en asesoramiento legal:</p>
-        <br />
-        <ul>
-          <li>Asesoría legal individual</li>
-          <li>
-            Apoyo en la presentación de denuncias y solicitudes de órdenes de
-            protección
-          </li>
-          <li>
-            Acompañamiento en procedimientos judiciales, como divorcios o casos
-            de custodia
-          </li>
-          <li>
-            Asistencia en la obtención de recursos legales y económicos, como
-            órdenes de restricción y asesoría sobre derechos legales
-          </li>
-        </ul>
-        </div>
-      </article>
+      <p class="box">
+        <b>En el Centro Comunitario Refugio de Abrazos:</b>
+        brindamos un espacio seguro y acogedor donde puedes encontrar apoyo tanto en cuestiones legales como emocionales. Nuestro equipo de expertos está aquí para acompañarte en tus desafíos legales, proporcionando asesoramiento sólido y orientación en momentos difíciles. Pero no nos detenemos allí; comprendemos que la dimensión emocional de cualquier situación legal es igualmente importante. Por eso, también ofrecemos un apoyo cálido y comprensivo para ayudarte a enfrentar tus emociones y tomar decisiones informadas. 
+      </p>
     </main>
-
+    <article class="article">
+      <div class="box">
+          <h3>ACOMPAÑAMIENTO EMOCIONAL</h3>
+      <p>
+        El acompañamiento emocional en situaciones de violencia de género es
+        esencial ya que brinda apoyo, comprensión y contención a las víctimas.
+        Ayuda a mitigar el impacto psicológico de la violencia, promueve la
+        recuperación emocional, y contribuye a romper el ciclo de abuso al
+        fomentar la autoestima, la confianza y el empoderamiento de las
+        víctimas, permitiéndoles tomar decisiones informadas y buscar ayuda
+        para poner fin a la violencia.
+      </p>
+      <br />
+      <p>Lo que ofrecemos de acompañamiento.</p>
+      <br />
+      <ul>
+        <li>Acompañamiento psicológico individual</li>
+        <li>Grupo de apoyo terapéutico</li>
+        <li>Terapia familiar y de pareja</li>
+        <li>Talleres de autoestima</li>
+      </ul>
+      </div>
+      <div class="box">
+        <h3>ASESORAMIENTO LEGAL</h3>
+    <p>
+      El acompañamiento legal en casos de violencia de género es esencial
+      para asesorar a las víctimas, proteger sus derechos y llevar a los
+      agresores ante la justicia. Ayuda a empoderar a las víctimas y a
+      garantizar su seguridad y acceso a la justicia.
+    </p>
+    <br />
+    <p>Lo que ofrecemos en asesoramiento legal:</p>
+    <br />
+    <ul>
+      <li>Asesoría legal individual</li>
+      <li>
+        Apoyo en la presentación de denuncias y solicitudes de órdenes de
+        protección
+      </li>
+      <li>
+        Acompañamiento en procedimientos judiciales, como divorcios o casos
+        de custodia
+      </li>
+      <li>
+        Asistencia en la obtención de recursos legales y económicos, como
+        órdenes de restricción y asesoría sobre derechos legales
+      </li>
+    </ul>
+    </div>
+    </article>
     <!--Footer-->
     <footer class="footer">
         <div class="container">
