@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./src/Images/Logo2.png"
+      type="LogoRefugio"
+    />
+    <title>Refugio de Abrazos</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      body {
+        min-height: 100%;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      .grid-container > * {
+        border-radius: 15px;
+        padding: 10px;
+      }
+
+      .header {
+        grid-area: header;
+        background-color: rgba(180, 219, 184, 0.822);
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        gap: 250px;
+        margin: 15px;
+        justify-content: flex-start;
+      }
+
+      .navbar {
+        grid-area: navbar;
+        background-color: rgb(255, 167, 215);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: auto;
+        height: 42px;
+        border-radius: 20px;
+        margin: 0px 20px 0px 20px;
+      }
+
+      a {
+        text-align: center;
+        color: black;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: rgb(2, 167, 2);
+      }
+
+      .main {
+        grid-area: main;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        text-align: center;
+        border: 15px;
+        padding: 15px;
+      }
+      .article {
+        grid-area: article;
+        background: rgb(211,187,221);
+        background: linear-gradient(90deg, rgba(211,187,221,1) 20%, rgba(255,127,219,1) 100%);
+        flex-grow: 1;
+        padding: 30px;
+        margin: 15px;
+        text-align:justify;
+        border-radius: 50px;
+      }
+
+      .box {
+        background-color: rgba(250,250,250,.35);
+        padding: 50px;
+        margin: 15px;
+        border-radius: 30px;
+      }
+
+      .footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: row;
+        gap: 250px;
+        margin: 15px;
+        justify-content: center;
+      }
+
+      /*FOOTER*/
+      .card {
+        background-color: rgb(240, 149, 213);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      .card p {
+        text-align: justify;
+        padding-left: 25px;
+      }
+
+      .card2 {
+        background-color: rgb(240, 149, 213);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      .card2 p {
+        text-align: justify;
+        padding-left: 25px;
+      }
+
+      .card3 {
+        background-color: rgb(240, 149, 213);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      .card3 p {
+        text-align: justify;
+        padding-left: 10px;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        width: 100%;
+      }
+
+      .button {
+        background-color: azure;
+        color: rgb(203, 164, 239);
+        padding: 10px 20px;
+      }
+
+      .iconos {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      @keyframes logo {
+        from {
+          opacity: 1;
+        }
+
+        to {
+          opacity: 0;
+        }
+      }
+
+      .logo {
+        animation-name: logo;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+      }
+
+      /*REPONSIVO*/
+      /*Teléfono*/
+      .grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+          "header"
+          "navbar"
+          "main"
+          "footer";
+      }
+      /*Tablet*/
+      @media (min-width: 768px) {
+        .grid-container {
+          grid-template-columns: 200px auto;
+          grid-template-rows: 160px 50px auto 100px;
+          grid-template-areas:
+            "header header"
+            "navbar navbar"
+            "main main"
+            "footer footer";
+        }
+      }
+      /*Escritorio*/
+      @media (min-width: 900px) {
+        .grid-container {
+          grid-template-columns: 200px auto;
+          grid-template-rows: 160px 50px auto 100px;
+          grid-template-areas:
+            "header header header"
+            "navbar navbar navbar"
+            "main main main"
+            "footer footer footer";
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    style="background-image: url(./src/Images/fondo_RAV.png)"
+    class="grid-container"
+  >
+    <!--Header-->
+    <header class="header">
+      <div class="container">
+        <div class="Logo">
+          <!---Logo inicial-->
+          <img
+            src="./src/Images/Logo1.png"
+            alt="Logo1"
+            width="100px"
+            height="100px"
+          />
+        </div>
+
+        <div
+          class="NumeroRecuadro"
+          style="display: flex; flex-direction: row; gap: 30px"
+          ;
+        >
+          <div>
+            <!---Logos de telefono-->
+            <img
+              style="margin: 20px 0px 0px 0px"
+              src="./src/Images/telefonoGrande.png"
+              alt="Logo"
+              width="auto"
+              height="75px"
+            />
+          </div>
+
+          <div class="Numero">
+            <!---Número de emegencia-->
+            <h5>Número de emergencia</h5>
+            <h1>55 19 28 37 64</h1>
+            <img
+              src="./src/Images/Whatsapp.webp"
+              alt="whatsApp"
+              width="auto"
+              height="20px"
+            />
+            <img
+              src="./src/Images/TelefonoChico.png"
+              alt="Llamada"
+              width="auto"
+              height="20px"
+            />
+            <h3>Horario: <strong>24 HRS</strong> Lunes a Domingo</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Barra de navegación-->
+    <nav class="navbar">
+      <a href="./index.html"><strong>Inicio</strong></a>
+      <a href="./servicios.html"
+        ><strong
+          >Servicios de acompañamiento <br />
+          y asesoramiento</strong
+        ></a
+      >
+      <a href="./cursosytalleres.html"><strong>Cursos y talleres</strong></a>
+      <a href="./numerosdeemergencia.html"><strong>Emergencia</strong></a>
+      <a href="./quienessomos.html"><strong>¿Quiénes somos?</strong></a>
+    </nav>
+
+    <!--Contenido-->
+    <main class="main">
+      <div>
+        <h2>SERVICIOS DE ACOMPAÑAMIENTO Y ASESORAMIENTO</h2>
+        <br />
+        <img
+          src="./src/Images/acompañamiento.jpg"
+          alt="imagen de acompañamiento"
+        />
+      </div>
+      <article class="article">
+        <div class="box">
+            <h3>ACOMPAÑAMIENTO EMOCIONAL</h3>
+        <p>
+          El acompañamiento emocional en situaciones de violencia de género es
+          esencial ya que brinda apoyo, comprensión y contención a las víctimas.
+          Ayuda a mitigar el impacto psicológico de la violencia, promueve la
+          recuperación emocional, y contribuye a romper el ciclo de abuso al
+          fomentar la autoestima, la confianza y el empoderamiento de las
+          víctimas, permitiéndoles tomar decisiones informadas y buscar ayuda
+          para poner fin a la violencia.
+        </p>
+        <br />
+        <p>Lo que ofrecemos de acompañamiento.</p>
+        <br />
+        <ul>
+          <li>Acompañamiento psicológico individual</li>
+          <li>Grupo de apoyo terapéutico</li>
+          <li>Terapia familiar y de pareja</li>
+          <li>Talleres de autoestima</li>
+        </ul>
+        </div>
+      </article>
+      <article class="article">
+        <div class="box">
+            <h3>ASESORAMIENTO LEGAL</h3>
+        <p>
+          El acompañamiento legal en casos de violencia de género es esencial
+          para asesorar a las víctimas, proteger sus derechos y llevar a los
+          agresores ante la justicia. Ayuda a empoderar a las víctimas y a
+          garantizar su seguridad y acceso a la justicia.
+        </p>
+        <br />
+        <p>Lo que ofrecemos en asesoramiento legal:</p>
+        <br />
+        <ul>
+          <li>Asesoría legal individual</li>
+          <li>
+            Apoyo en la presentación de denuncias y solicitudes de órdenes de
+            protección
+          </li>
+          <li>
+            Acompañamiento en procedimientos judiciales, como divorcios o casos
+            de custodia
+          </li>
+          <li>
+            Asistencia en la obtención de recursos legales y económicos, como
+            órdenes de restricción y asesoría sobre derechos legales
+          </li>
+        </ul>
+        </div>
+      </article>
+    </main>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="card"> 
+            <h4>Refugio de abrazos</h4>
+            <div class="boton">
+              <button class="contacta" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> Contacta con Nosotros</button> 
+          </div>
+            <br>
+            <img src="./src/Images/Logo2.png" width="100" height="100">
+            <br>
+          
+            <form class="form1" action="Register"> 
+              
+                <label for="Register">Nombre:</label>
+                <input type="text" placeholder="maria">
+                <br>
+                <br>
+              
+                <label for="Register">Apellido:</label>
+                <input type="text" placeholder="perez">
+                <br>
+                <br>
+                <label for="Register">Correo electronico:</label>
+                <input id="email" type="email" placeholder="123@gmail.com">
+                <br>
+                <br>
+                <label for="Register">Tú consulta:</label>
+                <input id="consulta" placeholder="text">
+                <br>
+                <br>
+              
+            <div class="boton">
+                <button class="enviar" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;">ENVIAR</button> 
+            </div>
+    
+            </form>
+          <br>
+          <br>
+          </div>
+                <div class="card2"> 
+          <h4>
+              <div class="boton">
+                <button class="AVISO DE PRIVACIDAD" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> AVISO DE PRIVACIDAD </button> 
+            </div>
+              <br>
+              <br>
+              <br>
+              <div class="boton">
+                <button class="AVISO LEGAL" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> AVISO LEGAL </button> 
+              <br>
+              <br>
+              <br>
+              <br>
+              <div class="boton">
+                <button class="POLITICA DE COOKIES" style="background-color:rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> POLITICA DE COOKIES </button> 
+            </h4>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="https://www.pngkey.com/png/full/935-9352373_click-picture-click-icon-png-free.png " alt="manita de click" width="55" height="75">
+          
+          
+                </div>
+          
+              <div class="card3"> 
+            <p><h4>CUENTA CON NOSOTROS</h4></p>
+            <br>
+            <div class="iconos">
+            <img src="https://cdn2.iconfinder.com/data/icons/funky/64/Facebook-1-512.png" alt="face" width="auto" height="30">  
+            <img src="https://www.mappingmegan.com/wp-content/uploads/2017/01/twitter-logo-png-transparent-background-twitter-transparent-logo-png.png" alt="twitter" width="auto" height="30">
+            <img src="https://www.internetmatters.org/wp-content/uploads/2020/01/instagradientlogo-no-background.png" alt="insta" width="auto" height="30">
+          </div>
+          <br>
+            <br> <h6>
+            <p> <b>🌐Dirección:</b> <br>
+              Av. Alemania #55, <br>
+              Col. Las Europas <br>
+              cp.34567
+            <br>
+            <br>
+            <p> <b>📞Teléfono:</b> <br>
+              (52) 33456-7890</p>
+            <br>
+            <p> <b>💻 Email: <br>
+            </b>contact@refugiodeabrazos.org</p>
+            <br>
+            <a href="#contacto">Contacto</a> | <a href="#servicios">Servicios</a> | <a href="#nosotros">Sobre Nosotros</a>
+          <br>
+          <br>
+          <br>
+          <br>
+          
+            <p> 2023 Centro Comunitario de Ayuda para Mujeres "REFUGIO DE ABRAZOS". </p>
+            </h6>
+            <br>
+            <footer class="footer">
+              <img class="logo" src="./src/Images/Logo2.png" width="70" height="70"></footer>
+    </footer>
+  </body>
+</html>
