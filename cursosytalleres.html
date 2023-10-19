@@ -6,47 +6,54 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="shortcut icon" href="./src/Images/Logo2.png" type="imagen de reloj">
     <title>Cursos y Talleres</title>
-    <style>
-        *{
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
 
-        }
-        body{
+    <style>
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+
+    }
+        
+    body{
         min-height: 100%;
     }
+
     html{
         height: 100%;
     }
+
     .grid-container > *{
-text-align: center;
-border-radius: 15px;
-padding: 10px;
+        text-align: center;
+        border-radius: 15px;
+        padding: 10px;
     }
     .header{
-            grid-area: header;
-            background-color: rgb(215, 247, 219);
-        }
-        .navbar{
-            grid-area: navbar;
-            background-color: rgb(255, 167, 215);
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            width: auto;
-            height: 42px;
-            border-radius: 20px;
-            margin: 0px 20px 0px 20px;
+        grid-area: header;
+        background-color: rgb(215, 247, 219);
     }
+
+    .navbar{
+        grid-area: navbar;
+        background-color: rgb(255, 167, 215);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: auto;
+        height: 42px;
+        border-radius: 20px;
+        margin: 0px 20px 0px 20px;
+    }
+
     a{
-            text-align: center;
-            color: black;
-            text-decoration: none;
-        }
-        a:hover{
-            color: rgb(2, 167, 2);
-        }
+        text-align: center;
+        color: black;
+        text-decoration: none;
+    }
+    a:hover{
+        color: rgb(2, 167, 2);
+    }
+
     .sidebar{
         grid-area: sidebar; 
         background-color:bisque
@@ -72,8 +79,7 @@ padding: 10px;
         "navbar"
         "main"
         "sidebar"
-        "footer"
-        ;
+        "footer";
     }
     /*Para tablet*/
     @media(min-width:768px){
@@ -82,7 +88,7 @@ padding: 10px;
         grid-template-rows:100px 50px auto 100px;
         grid-template-areas:
         "header header"
-        "nabvar navbar"
+        "navbar navbar"
         "sidebar main"
         "footer footer";
     }    
@@ -97,9 +103,9 @@ padding: 10px;
         grid-template-rows:100px 50px auto 100px;
         grid-template-areas:
         "header header header"
-        "nabvar navbar navbar"
+        "navbar navbar navbar"
         "sidebar sidebar main"
-        "footer footer footer"
+        "footer footer footer";
 
     }    
     .container{
@@ -121,8 +127,8 @@ padding: 10px;
             animation-iteration-count: infinite;
             animation-direction: alternate-reverse;
         }
-.card{
-            background-color: rgb(195, 152, 235);
+    .card{
+            background-color: rgb(240, 149, 213);
             padding: 20px;
             text-align: center;
             border-radius: 10px;
@@ -134,7 +140,7 @@ padding: 10px;
            }
 
     .card2{
-            background-color: rgb(195, 152, 235);
+            background-color: rgb(240, 149, 213);
             padding: 20px;
             text-align: center;
             border-radius: 10px;
@@ -144,7 +150,7 @@ padding: 10px;
             padding-left: 25px;
         }
         .card3{
-            background-color: rgb(195, 152, 235);
+            background-color:rgb(240, 149, 213);
             padding: 20px;
             text-align: center;
             border-radius: 10px;
@@ -181,49 +187,49 @@ padding: 10px;
     
 </head>
 <body class="grid-container">
-          <header class="header">
-              <div class="container1">
-      
-                  <div class="Logo">
-                      <!---Logo inicial-->
-                  <img src="./src/Images/Logo2.png" alt="Logo1" width="100px" height="100px">
-                  </div>
-          
-                  <div class="NumeroRecuadro"
-                  style="display: flex;
-                  flex-direction: row;
-                  gap: 30px";>
-                      <div>
-                          <!---Logos de telefono-->
-                      <img style="margin: 20px 0px 0px 0px;"
-                      src="./src/Images/telefonoGrande.png" alt="Logo" width="80px" height="75px">
-                      </div>
-          
-                      <div class="Numero">
-                      <!---Número de emegencia-->
-                      <h5>Número de emergencia</h5>
-                      <h1>55 19 28 37 64</h1>
-                      <img src="./src/Images/Whatsapp.webp" alt="whatsApp" width="32px" height="32px">
-                      <img src="./src/Images/TelefonoChico.png" alt="Llamada" width="30px" height="30px">
-                      <h3>Horario: <strong>24 HRS</strong> Lunes a Domingo</h3>
-                      </div>
-                  </div>
-              </div>
-      
-          </header>
-      
-          <nav class="navbar">
-      
-              <a href="./index.html"><strong>Inicio</strong></a>
-              <a href=""><strong>Servicios de acompañamiento <br> y asesoramiento</strong></a>
-              <a href=""><strong>Cursos y talleres</strong></a>
-              <a href=""><strong>Emergencia</strong></a>
-              <a href=""><strong>¿Quiénes somos?</strong></a>
-              
-          </nav>
+    <header class="header">
+        
+        <div class="container">
 
-      </body>
+            <div class="Logo">
+                <!---Logo inicial-->
+            <img src="./src/Images/Logo1.png" alt="Logo1" width="100px" height="100px">
+            </div>
+    
+            <div class="NumeroRecuadro"
+            style="display: flex;
+            flex-direction: row;
+            gap: 30px";>
+                <div>
+                    <!---Logos de telefono-->
+                <img style="margin: 20px 0px 0px 0px;"
+                src="./src/Images/telefonoGrande.png" alt="Logo" width="auto" height="75px">
+                </div>
+    
+                <div class="Numero">
+                <!---Número de emegencia-->
+                <h5>Número de emergencia</h5>
+                <h1>55 19 28 37 64</h1>
+                <img src="./src/Images/Whatsapp.webp" alt="whatsApp" width="auto" height="20px">
+                <img src="./src/Images/TelefonoChico.png" alt="Llamada" width="auto" height="20px">
+                <h3>Horario: <strong>24 HRS</strong> Lunes a Domingo</h3>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <nav class="navbar">
+
+        <a href="./index.html"><strong>Inicio</strong></a>
+        <a href="./servicios.html"><strong>Servicios de acompañamiento <br> y asesoramiento</strong></a>
+        <a href="./cursosytalleres.html"><strong>Cursos y talleres</strong></a>
+        <a href="./numerosdeemergencia.html"><strong>Emergencia</strong></a>
+        <a href="./quienessomos.html"><strong>¿Quiénes somos?</strong></a>
+    
     </nav>
+
+    
     <aside class="sidebar">
         <div id="masinformacion1">
             <div class="aside">
@@ -312,7 +318,7 @@ padding: 10px;
             <div class="card"> 
             <h4>Refugio de abrazos</h4>
             <div class="boton">
-              <button class="contacta" style="background-color: rgb(81, 160, 160); color: blueviolet;padding: 10px 20px;"> Contacta con Nosotros</button> 
+              <button class="contacta" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> Contacta con Nosotros</button> 
           </div>
             <br>
             <img src="./src/Images/Logo2.png" width="100" height="100">
@@ -339,8 +345,9 @@ padding: 10px;
                 <br>
               
             <div class="boton">
-                <button class="enviar" style="background-color: rgb(81, 160, 160); color: blueviolet;padding: 10px 20px;"> ENVIAR</button> 
+                <button class="enviar" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;">ENVIAR</button> 
             </div>
+    
             </form>
           <br>
           <br>
@@ -348,25 +355,25 @@ padding: 10px;
                 <div class="card2"> 
           <h4>
               <div class="boton">
-                <button class="AVISO DE PRIVACIDAD" style="background-color: rgb(81, 160, 160); color: blueviolet;padding: 10px 20px;"> AVISO DE PRIVACIDAD </button> 
+                <button class="AVISO DE PRIVACIDAD" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> AVISO DE PRIVACIDAD </button> 
             </div>
               <br>
               <br>
               <br>
               <div class="boton">
-                <button class="AVISO LEGAL" style="background-color: rgb(81, 160, 160); color: blueviolet;padding: 10px 20px;"> AVISO LEGAL </button> 
+                <button class="AVISO LEGAL" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> AVISO LEGAL </button> 
               <br>
               <br>
               <br>
               <br>
               <div class="boton">
-                <button class="POLITICA DE COOKIES" style="background-color: rgb(81, 160, 160); color: blueviolet;padding: 10px 20px;"> POLITICA DE COOKIES </button> 
+                <button class="POLITICA DE COOKIES" style="background-color:rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> POLITICA DE COOKIES </button> 
             </h4>
             <br>
             <br>
             <br>
             <br>
-            <img src="https://www.pngkey.com/png/full/935-9352373_click-picture-click-icon-png-free.png " alt="manita de click" width="90" height="90">
+            <img src="https://www.pngkey.com/png/full/935-9352373_click-picture-click-icon-png-free.png " alt="manita de click" width="55" height="75">
           
           
                 </div>
@@ -375,7 +382,9 @@ padding: 10px;
             <p><h4>CUENTA CON NOSOTROS</h4></p>
             <br>
             <div class="iconos">
-            <img src="https://cdn2.iconfinder.com/data/icons/funky/64/Facebook-1-512.png" alt="face" width="40" height="25">  <img src="https://www.mappingmegan.com/wp-content/uploads/2017/01/twitter-logo-png-transparent-background-twitter-transparent-logo-png.png" alt="twitter" width="35" height="30"><img src="https://www.internetmatters.org/wp-content/uploads/2020/01/instagradientlogo-no-background.png" alt="insta" width="60" height="30">
+            <img src="https://cdn2.iconfinder.com/data/icons/funky/64/Facebook-1-512.png" alt="face" width="auto" height="30">  
+            <img src="https://www.mappingmegan.com/wp-content/uploads/2017/01/twitter-logo-png-transparent-background-twitter-transparent-logo-png.png" alt="twitter" width="auto" height="30">
+            <img src="https://www.internetmatters.org/wp-content/uploads/2020/01/instagradientlogo-no-background.png" alt="insta" width="auto" height="30">
           </div>
           <br>
             <br> <h6>
@@ -397,13 +406,12 @@ padding: 10px;
           <br>
           <br>
           
-            <p>&copy; 2023 Centro Comunitario de Ayuda para Mujeres "REFUGIO DE ABRAZOS". </p>
+            <p> 2023 Centro Comunitario de Ayuda para Mujeres "REFUGIO DE ABRAZOS". </p>
             </h6>
             <br>
             <footer class="footer">
-              <img class="logo" src="./RCS/Logo2.png" width="70" height="70"></footer>
-              </footer>
-          </div>
-    </footer>
+              <img class="logo" src="./src/Images/Logo2.png" width="70" height="70"></footer>
+        </footer>
+    
 </body>
 </html>

@@ -87,14 +87,12 @@ display: flex;width:100%}
         .tabla{
             grid-area: tabla;
         }
+  
         .footer{
             grid-area: footer;
-            display: flex;
-            flex-direction: row;
-            gap: 250px;
-            margin: 15px;
-            justify-content:center; 
+            
         }
+
         .grid-container{
             display: grid;
             gap: 10px;
@@ -149,49 +147,136 @@ display: flex;width:100%}
             animation-duration: 2s;
             animation-iteration-count: infinite;
             animation-direction: alternate-reverse;}
-         </style>
+
+  
+  
+  
+            /*footer*/
+
+
+
+  .card{
+        background-color: rgb(240, 149, 213);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .card p{
+        text-align: justify;
+        padding-left: 25px;
+        }
+
+    .card2{
+        background-color: rgb(240, 149, 213);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .card2 p{
+        text-align: justify;
+        padding-left: 25px;
+        }
+
+    .card3{
+        background-color: rgb(240, 149, 213);
+        padding: 20px;
+        margin-right: 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .card3 p{
+        text-align: justify;
+        padding-left: 10px;
+    }       
+    
+    .containerfooter{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        width: 100%;
+    } 
+
+    .button{
+        background-color: azure;
+        color: rgb(203, 164, 239);
+        padding: 10px 20px;
+    }
+
+    .iconos{
+        display: flex;
+        align-items: center;
+        justify-content:space-between; 
+    }
+
+    @keyframes logo{
+        from{
+            opacity: 1;
+            }
+        to{
+            opacity: 0;
+            }
+
+    }
+        
+    .logofooter{
+        animation-name: logo;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        width:70px;
+        height:70px;
+    }
+
+
+
+
+        </style>
     
 </head>
 </head>
 <body style="background-image: url(./src/img/fondo_RAV.png);" 
 class="grid-container">
-    <header class="header">
+<header class="header">
         
-        <div class="container">
+    <div class="container">
 
-            <div class="Logo">
-                <!---Logo inicial-->
-            <img src="./src/img/Logo1.png" alt="Logo1" width="100px" height="100px">
+        <div class="Logo">
+            <!---Logo inicial-->
+        <img src="./src/Images/Logo1.png" alt="Logo1" width="100px" height="100px">
+        </div>
+
+        <div class="NumeroRecuadro"
+        style="display: flex;
+        flex-direction: row;
+        gap: 30px";>
+            <div>
+                <!---Logos de telefono-->
+            <img style="margin: 20px 0px 0px 0px;"
+            src="./src/Images/telefonoGrande.png" alt="Logo" width="auto" height="75px">
             </div>
-    
-            <div class="NumeroRecuadro"
-            style="display: flex;
-            flex-direction: row;
-            gap: 30px";>
-                <div>
-                    <!---Logos de telefono-->
-                <img style="margin: 20px 0px 0px 0px;"
-                src="./src/img/telefonoGrande.png" alt="Logo" width="80px" height="75px">
-                </div>
-    
-                <div class="Numero">
-                <!---Número de emegencia-->
-                <h5>Número de emergencia</h5>
-                <h1>55 19 28 37 64</h1>
-                <img src="./src/img/Whatsapp.webp" alt="whatsApp" width="32px" height="32px">
-                <img src="./src/img/TelefonoChico.png" alt="Llamada" width="30px" height="30px">
-                <h3>Horario: <strong>24 HRS</strong> Lunes a Domingo</h3>
-                </div>
+
+            <div class="Numero">
+            <!---Número de emegencia-->
+            <h5>Número de emergencia</h5>
+            <h1>55 19 28 37 64</h1>
+            <img src="./src/Images/Whatsapp.webp" alt="whatsApp" width="auto" height="20px">
+            <img src="./src/Images/TelefonoChico.png" alt="Llamada" width="auto" height="20px">
+            <h3>Horario: <strong>24 HRS</strong> Lunes a Domingo</h3>
             </div>
         </div>
+    </div>
+
 </header>
-<body><nav class="navbar">
+
+<nav class="navbar">
 
     <a href="./index.html"><strong>Inicio</strong></a>
-    <a href=""><strong>Servicios de acompañamiento <br> y asesoramiento</strong></a>
-    <a href=""><strong>Cursos y talleres</strong></a>
-    <a href=""><strong>Emergencia</strong></a>
-    <a href=""><strong>¿Quiénes somos?</strong></a>
+    <a href="./servicios.html"><strong>Servicios de acompañamiento <br> y asesoramiento</strong></a>
+    <a href="./cursosytalleres.html"><strong>Cursos y talleres</strong></a>
+    <a href="./numerosdeemergencia.html"><strong>Emergencia</strong></a>
+    <a href="./quienessomos.html"><strong>¿Quiénes somos?</strong></a>
     
 </nav>
 
@@ -218,7 +303,7 @@ class="grid-container">
             <h3>Red Nacional de Refugios A.C</h3>
             <p>📞Teléfono:01 800 822 4460</p>
             <p>💻Sitio web:www.rednacionalderefugios.org.mx</p>
-             </div>
+            </div>
         </div>
         <div class="card1">
             <div class="imagen"> 
@@ -259,6 +344,110 @@ class="grid-container">
         </div>
     </div>
 </div>
+
+
+<footer class="footer">
+
+    <div class="containerfooter">
+        <div class="card"> 
+        <h4>Refugio de abrazos</h4>
+        <div class="boton">
+        <button class="button"> Contacta con Nosotros</button> 
+    </div>
+        <br>
+        <img src="./src/Images/Logo2.png" width="100" height="100">
+        <br>
+    
+        <form class="form1" action="Register"> 
+        
+            <label for="Register">Nombre:</label>
+            <input type="text" placeholder="maria">
+            <br>
+            <br>
+        
+            <label for="Register">Apellido:</label>
+            <input type="text" placeholder="perez">
+            <br>
+            <br>
+            <label for="Register">Correo electronico:</label>
+            <input id="email" type="email" placeholder="123@gmail.com">
+            <br>
+            <br>
+            <label for="Register">Tú consulta:</label>
+            <input id="consulta" placeholder="text">
+            <br>
+            <br>
+        
+        <div class="boton">
+            <button class="button"> ENVIAR</button> 
+        </div>
+        </form>
+    <br>
+    <br>
+    </div>
+            <div class="card2"> 
+    <h4>
+        <div class="boton">
+            <button class="button"> AVISO DE PRIVACIDAD </button> 
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="boton">
+            <button class="button"> AVISO LEGAL </button> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="boton">
+            <button class="button"> POLITICA DE COOKIES </button> 
+        </h4>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="https://www.pngkey.com/png/full/935-9352373_click-picture-click-icon-png-free.png " alt="manita de click" width="90" height="90">
+    
+    
+            </div>
+    
+        <div class="card3"> 
+        <p><h4>CUENTA CON NOSOTROS</h4></p>
+        <br>
+        <div class="iconos">
+        <img src="https://cdn2.iconfinder.com/data/icons/funky/64/Facebook-1-512.png" alt="face" width="40" height="25"> <img src="https://www.mappingmegan.com/wp-content/uploads/2017/01/twitter-logo-png-transparent-background-twitter-transparent-logo-png.png" alt="twitter" width="35" height="30"><img src="https://www.internetmatters.org/wp-content/uploads/2020/01/instagradientlogo-no-background.png" alt="insta" width="60" height="30">
+    </div>
+    <br>
+        <br> <h6>
+        <p> <b>🌐Dirección:</b> <br>
+        Av. Alemania #55, <br>
+        Col. Las Europas <br>
+        cp.34567
+        <br>
+        <br>
+        <p> <b>📞Teléfono:</b> <br>
+        (52) 33456-7890</p>
+        <br>
+        <p> <b>💻 Email: <br>
+        </b>contact@refugiodeabrazos.org</p>
+        <br>
+        <a href="#contacto">Contacto</a> | <a href="#servicios">Servicios</a> | <a href="#nosotros">Sobre Nosotros</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+        <p> 2023 Centro Comunitario de Ayuda para Mujeres "REFUGIO DE ABRAZOS". </p>
+        </h6>
+        <br>
+        <footer class="footer">
+        <img class="logofooter" src="./src/Images/Logo2.png">
+        </footer>
+    </div>
+
+
 </footer>
+
+
 </body>
 </html>
