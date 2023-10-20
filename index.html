@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/Images/Logo2.png" type="LogoRefugio">
+    <title>Refugio de Abrazos</title>
+    
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body{
+            min-height: 100%;
+        }
+        html{
+            height: 100%;
+        }
+        .grid-container > *{
+           border-radius: 15px;
+           padding: 10px;
+        }
+        .header{
+            grid-area: header;
+            background-color: rgba(180, 219, 184, 0.822);
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            gap: 250px;
+            margin: 15px;
+            justify-content:flex-start; 
+        }   
+        .navbar{
+            grid-area: navbar;
+            background-color: rgb(255, 167, 215);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: auto;
+            height: 42px;
+            border-radius: 20px;
+            margin: 0px 20px 0px 20px;
+        }
+        a{
+            text-align: center;
+            color: black;
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(2, 167, 2);
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color: rgba(255, 214, 209, 0.719);
+            display: flex; 
+            flex-direction: column; 
+            text-align: justify; 
+            margin: 0px 0px 0px 20px;
+            font-size: smaller;
+        }
+        .main{
+            grid-area: main;
+            background-color: rgba(207, 207, 207, 0);
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+        .tabla{
+            grid-area: tabla;
+        }
+        .titulo{
+            background-color: rgba(255, 128, 177, 0.74);
+        }
+        .secciones{
+            margin: 5%;
+            text-align: center;
+            background-color: rgba(226, 183, 177, 0.938);
+        }
+        .pregunta{
+            text-align: justify;
+            padding: 1%;
+        }
+        .footer{
+            grid-area: footer;
+            display: flex;
+            flex-direction: row;
+            gap: 250px;
+            margin: 15px;
+            justify-content:center; 
+        }
+        /*FOOTER*/
+        .card{
+            background-color: rgb(240, 149, 213);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+    }
+
+           .card p{
+            text-align: justify;
+            padding-left: 25px;
+           }
+
+    .card2{
+            background-color: rgb(240, 149, 213);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+    }
+    .card2 p{
+            text-align: justify;
+            padding-left: 25px;
+        }
+        .card3{
+            background-color: rgb(240, 149, 213);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+    }
+    .card3 p{
+            text-align: justify;
+            padding-left: 10px;
+        }       
+         .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            width: 100%;
+    }
+    .button{
+      background-color: azure;
+      color: rgb(203, 164, 239);
+      padding: 10px 20px;
+      
+    }
+    .iconos{
+      display: flex;
+  align-items: center;
+  justify-content:space-between; 
+}
+@keyframes logo{
+                from{
+                    opacity: 1;
+                }
+                to{
+                    opacity: 0;
+                }
+
+                }
+        .logo{
+            animation-name: logo;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+        /*REPONSIVO*/
+        /*Télefono*/
+        .grid-container{
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+            "header"
+            "navbar"
+            "main"
+            "sidebar"
+            "tabla"
+            "tabla"
+            "tabla"
+            "footer";
+        }
+
+        /*Para Tablet*/
+        @media(min-width: 768px){
+            .grid-container{
+                grid-template-columns: 200px auto;
+                grid-template-rows: 150px 50px auto 100px;
+                
+                grid-template-areas: 
+                "header header"
+                "navbar navbar"
+                "sidebar main"
+                "tabla tabla"
+                "tabla tabla"
+                "tabla tabla"
+                "footer footer";
+            }
+        }
+        
+        /*Para escritorio*/
+        @media(min-width: 900px){
+            .grid-container{
+                grid-template-columns: 200px auto;
+                grid-template-rows: 150px 50px auto 100px;
+
+                grid-template-areas: 
+                "header header header"
+                "navbar navbar navbar"
+                "sidebar main main"
+                "sidebar tabla tabla"
+                "sidebar tabla tabla"
+                "sidebar tabla tabla"
+                "footer footer footer";
+            }
+        }   
+
+    </style>
+</head>
+<body style="background-image: url(./src/Images/fondo_RAV.png);" 
+class="grid-container">
+    <header class="header">
+        
+        <div class="container">
+
+            <div class="Logo">
+                <!---Logo inicial-->
+            <img src="./src/Images/Logo1.png" alt="Logo1" width="100px" height="100px">
+            </div>
+    
+            <div class="NumeroRecuadro"
+            style="display: flex;
+            flex-direction: row;
+            gap: 30px";>
+                <div>
+                    <!---Logos de telefono-->
+                <img style="margin: 20px 0px 0px 0px;"
+                src="./src/Images/telefonoGrande.png" alt="Logo" width="auto" height="75px">
+                </div>
+    
+                <div class="Numero">
+                <!---Número de emegencia-->
+                <h5>Número de emergencia</h5>
+                <h1>55 19 28 37 64</h1>
+                <img src="./src/Images/Whatsapp.webp" alt="whatsApp" width="auto" height="20px">
+                <img src="./src/Images/TelefonoChico.png" alt="Llamada" width="auto" height="20px">
+                <h3>Horario: <strong>24 HRS</strong> Lunes a Domingo</h3>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <nav class="navbar">
+
+        <a href="./index.html"><strong>Inicio</strong></a>
+        <a href="./servicios.html"><strong>Servicios de acompañamiento <br> y asesoramiento</strong></a>
+        <a href="./cursosytalleres.html"><strong>Cursos y talleres</strong></a>
+        <a href="./numerosdeemergencia.html"><strong>Emergencia</strong></a>
+        <a href="./quienessomos.html"><strong>¿Quiénes somos?</strong></a>
+        
+    </nav>
+
+    <aside class="sidebar">
+        <!---historias de éxito-->
+       <p style="text-align: center;">
+        <strong>HISTORIA DE ÉXITO</strong>
+        <br><br>
+        <img style="border-radius: 1rem;"
+        src="https://img.freepik.com/vector-premium/asociacion-que-ayuda-mujeres-victimas-violencia-domestica-mujeres-que-dan-mano-apoyo-psicologico_511325-301.jpg" width="75%" height="auto" alt="">
+       </p><br>
+       <strong>"Buscando la libertad financiera"</strong>
+       <p>
+        <br>En el Edo. de México, Chalco. Diana, de 48 años y madre de siete hijos, sufrió durante 28 años hasta que finalmente decidió separarse de su maltratador. <br>
+        <br><strong>"No tenía miedo de que me pegara, sino que estaba convencida de que me mataría", explica.</strong>
+        <br><br>Salir no fue fácil, pero con el apoyo de las trabajadoras sociales, del centro comunitario "Refugio de abrazos", un espacio seguro dentro de los talleres, Diana consiguió oficio y así un trabajo como asistente dandole libertad financiera. <br>
+        <br><strong>"Reconozco que fue difícil, pero con terapia, ayuda legal y la formación en habilidades, me recuperé".</strong>
+       </p>
+    </aside>
+
+    <article class="main">
+        <div style="display: flex; flex-direction: column; gap: 10px;" >
+            <h1>¡REFUGIO DE ABRAZOS!</h1>
+            <p>Sobre nosotras: <br><br> "Somos un centro comunitario que está destinado a ayudar a mujeres que sufren de violencia de género, <br> contamos con atención 24 horas al día, los siete días de la semana, así como el espacio para promover <br> la realización de cursos y talleres como apoyo extra a nuestra comunidad. ¡Conócenos!"</p>
+        </div>
+
+        <div>
+        <img style="border-radius:5%;"
+        src="./src/Images/chicas.jpeg" alt="señoras" width="600px" height="auto">
+        </div>
+
+        <div class="frase">
+            <marquee style="text-align: end;"
+            behavior="scroll" direction="left">“El feminismo es una forma de vivir individualmente y luchar colectivamente” <br> -Simone de Beauvoir</marquee>
+        </div>  
+    </article>
+    
+    <table class="tabla">
+
+        <colgroup span="3" style="background: rgba(143, 204, 158, 0.616);">
+        <colgroup span="5" style="background: rgba(182, 182, 182, 0.664);">
+        <tr class="titulo">
+            <th colspan="5" scope="rowgroup">
+            <h2>Violentómetro en el noviazgo</h2>
+            </th>
+        </tr>
+    
+        <tr class="secciones" >
+            <th colspan="3">Preguntas</th>
+            <th>
+               --- si = 3 --- A veces = 2 --- Rara vez = 1 --- No = 0 ---
+            </th>
+            <th>Puntos</th>
+        </tr>
+
+        <tr>
+          <th class="pregunta" colspan="3">1.- ¿Sientes que tu pareja constantemente te está controlando "por amor"?</th>
+          
+          <td>
+            <div style="text-align: center;">
+                <input type="radio" id="pregunta1" name="pregunta1">Si
+                <input type="radio" id="pregunta1" name="pregunta1">A veces
+                <input type="radio" id="pregunta1" name="pregunta1">Rara vez
+                <input type="radio" id="pregunta1" name="pregunta1">No
+            </div>
+          </td>
+    
+          <td>
+            <form style="display: flex; flex-direction: row; justify-content: center;"
+            action="puntos">
+                <input type="text" size="3" placeholder="Tus puntos">
+                <label for="">Pts.</label>
+            </form>
+          </td>
+        </tr>
+
+        <tr>
+            <th class="pregunta" colspan="3">2.- ¿Te acusa de infidelidad o de que actúas en forma sospechosa?</th>
+            
+            <td>
+              <div style="text-align: center;">
+                  <input type="radio" id="pregunta2" name="pregunta2">Si
+                  <input type="radio" id="pregunta2" name="pregunta2">A veces
+                  <input type="radio" id="pregunta2" name="pregunta2">Rara vez
+                  <input type="radio" id="pregunta2" name="pregunta2">No
+              </div>
+            </td>
+      
+            <td>
+              <form style="display: flex; flex-direction: row; justify-content: center;"
+              action="puntos">
+                  <input type="text" size="3" placeholder="Tus puntos">
+                  <label for="">Pts.</label>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="pregunta" colspan="3">3.- ¿Has perdido contacto con amigos, familiares, compañeras/os de tu escuela o trabajo para evitar que tu pareja se moleste?</th>
+            
+            <td>
+              <div style="text-align: center;">
+                  <input type="radio" id="pregunta3" name="pregunta3">Si
+                  <input type="radio" id="pregunta3" name="pregunta3">A veces
+                  <input type="radio" id="pregunta3" name="pregunta3">Rara vez
+                  <input type="radio" id="pregunta3" name="pregunta3">No
+              </div>
+            </td>
+      
+            <td>
+              <form style="display: flex; flex-direction: row; justify-content: center;"
+              action="puntos">
+                  <input type="text" size="3" placeholder="Tus puntos">
+                  <label for="">Pts.</label>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="pregunta" colspan="3">4.- ¿Te critica y humilla en público o en privado, opina negativamente sobre tu apariencia, tu forma de ser o el modo en que te vistes?</th>
+            
+            <td>
+              <div style="text-align: center;">
+                  <input type="radio" id="pregunta4" name="pregunta4">Si
+                  <input type="radio" id="pregunta4" name="pregunta4">A veces
+                  <input type="radio" id="pregunta4" name="pregunta4">Rara vez
+                  <input type="radio" id="pregunta4" name="pregunta4">No
+              </div>
+            </td>
+      
+            <td>
+              <form style="display: flex; flex-direction: row; justify-content: center;"
+              action="puntos">
+                  <input type="text" size="3" placeholder="Tus puntos">
+                  <label for="">Pts.</label>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="pregunta" colspan="3">5.- ¿Tu pareja tiene cambios bruscos de humor o se comporta distinto contigo en público, como si fuera otra persona?</th>
+            
+            <td>
+              <div style="text-align: center;">
+                  <input type="radio" id="pregunta5" name="pregunta5">Si
+                  <input type="radio" id="pregunta5" name="pregunta5">A veces
+                  <input type="radio" id="pregunta5" name="pregunta5">Rara vez
+                  <input type="radio" id="pregunta5" name="pregunta5">No
+              </div>
+            </td>
+      
+            <td>
+              <form style="display: flex; flex-direction: row; justify-content: center;"
+              action="puntos">
+                  <input type="text" size="3" placeholder="Tus puntos">
+                  <label for="">Pts.</label>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="pregunta" colspan="3">6.- ¿Sientes que está en permanente tensión y que, hagas lo que hagas, el se irrita o te culpabiliza de sus cambios?</th>
+            
+            <td>
+              <div style="text-align: center;">
+                  <input type="radio" id="pregunta6" name="pregunta6">Si
+                  <input type="radio" id="pregunta6" name="pregunta6">A veces
+                  <input type="radio" id="pregunta6" name="pregunta6">Rara vez
+                  <input type="radio" id="pregunta6" name="pregunta6">No
+              </div>
+            </td>
+      
+            <td>
+              <form style="display: flex; flex-direction: row; justify-content: center;"
+              action="puntos">
+                  <input type="text" size="3" placeholder="Tus puntos">
+                  <label for="">Pts.</label>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="pregunta" colspan="3">7.- ¿Te ha golpeado con sus manos, te ha jaloneado o te ha lanzado cosas cuando se enoja o cuando discuten?</th>
+            
+            <td>
+              <div style="text-align: center;">
+                  <input type="radio" id="pregunta7" name="pregunta7">Si
+                  <input type="radio" id="pregunta7" name="pregunta7">A veces
+                  <input type="radio" id="pregunta7" name="pregunta7">Rara vez
+                  <input type="radio" id="pregunta7" name="pregunta7">No
+              </div>
+            </td>
+      
+            <td>
+              <form style="display: flex; flex-direction: row; justify-content: center;"
+              action="puntos">
+                  <input type="text" size="3" placeholder="Tus puntos">
+                  <label for="">Pts.</label>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <th  class="pregunta" colspan="3">8.- ¿Te ha amenazado alguna vez con un objeto o armas, o con matarse él, a ti o a algún miembro de la familia si no le obedeces?</th>
+            
+            <td>
+              <div style="text-align: center;">
+                  <input type="radio" id="pregunta8" name="pregunta8">Si
+                  <input type="radio" id="pregunta8" name="pregunta8">A veces
+                  <input type="radio" id="pregunta8" name="pregunta8">Rara vez
+                  <input type="radio" id="pregunta8" name="pregunta8">No
+              </div>
+            </td>
+      
+            <td>
+              <form style="display: flex; flex-direction: row; justify-content: center;"
+              action="puntos">
+                  <input type="text" size="3" placeholder="Tus puntos">
+                  <label for="">Pts.</label>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="pregunta" colspan="3">9.- ¿Sientes que cedes a sus peticiones sexuales por temor, o te ha forzado a tener relaciones, amenazándote que si no tiene relaciones contigo, entonces se va con otra?</th>
+            
+            <td>
+              <div style="text-align: center;">
+                  <input type="radio" id="pregunta9" name="pregunta9">Si
+                  <input type="radio" id="pregunta9" name="pregunta9">A veces
+                  <input type="radio" id="pregunta9" name="pregunta9">Rara vez
+                  <input type="radio" id="pregunta9" name="pregunta9">No
+              </div>
+            </td>
+      
+            <td>
+              <form style="display: flex; flex-direction: row; justify-content: center;"
+              action="puntos">
+                  <input type="text" size="3" placeholder="Tus puntos">
+                  <label for="">Pts.</label>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="pregunta" colspan="3">10.- Después de un episodio violento, ¿se muestra cariñoso y atento, te regala cosas y te promete que nunca más volverá a pegarte o insultarte y te dice que “todo cambiará”?</th>
+            
+            <td>
+              <div style="text-align: center;">
+                  <input type="radio" id="pregunta9" name="pregunta9">Si
+                  <input type="radio" id="pregunta9" name="pregunta9">A veces
+                  <input type="radio" id="pregunta9" name="pregunta9">Rara vez
+                  <input type="radio" id="pregunta9" name="pregunta9">No
+              </div>
+            </td>
+      
+            <td>
+              <form style="display: flex; flex-direction: row; justify-content: center;"
+              action="puntos">
+                  <input type="text" size="3" placeholder="Tus puntos">
+                  <label for="">Pts.</label>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="pregunta" colspan="3">11. ¿Has buscado o has recibido ayuda por lesiones que él te ha causado? (primeros auxilios, atención médica o legal)</th>
+            
+            <td>
+              <div style="text-align: center;">
+                  <input type="radio" id="pregunta9" name="pregunta9">Si
+                  <input type="radio" id="pregunta9" name="pregunta9">A veces
+                  <input type="radio" id="pregunta9" name="pregunta9">Rara vez
+                  <input type="radio" id="pregunta9" name="pregunta9">No
+              </div>
+            </td>
+      
+            <td>
+              <form style="display: flex; flex-direction: row; justify-content: center;"
+              action="puntos">
+                  <input type="text" size="3" placeholder="Tus puntos">
+                  <label for="">Pts.</label>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="pregunta" colspan="3">12. ¿Es violento con otras personas o se pelea a golpes con otros hombres?</th>
+            
+            <td>
+              <div style="text-align: center;">
+                  <input type="radio" id="pregunta9" name="pregunta9">Si
+                  <input type="radio" id="pregunta9" name="pregunta9">A veces
+                  <input type="radio" id="pregunta9" name="pregunta9">Rara vez
+                  <input type="radio" id="pregunta9" name="pregunta9">No
+              </div>
+            </td>
+      
+            <td>
+              <form style="display: flex; flex-direction: row; justify-content: center;"
+              action="puntos">
+                  <input type="text" size="3" placeholder="Tus puntos">
+                  <label for="">Pts.</label>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="background-color: rgba(226, 183, 177, 0.938); text-align: center;" class="pregunta" colspan="4"><strong>La suma total es el índice de violencia en tu noviazgo:</strong>
+                <br><strong>26 a 35 puntos:</strong><br> ¡CUIDADO! Pide asesoría y apoyo, tu seguridad puede estar en riesgo.
+                <br><br><strong>16 a 25 puntos:</strong><br> ESTÁ VIVIENDO VIOLENCIA Tu relación tiene señales de abuso de poder.
+                <br><br><strong>6 a 15 puntos:</strong><br> PLATICA CON TU PAREJA, revisa las reglas de tu relación.
+                <br><br><strong>0 a 5 puntos:</strong><br> RELACIÓN NO ABUSIVA, tal vez existan algunos problemas que de manera común presentan entre las parejas, pero se resuelven sin violencia.
+            <td>
+              <form style="display: flex; flex-direction: row; justify-content: center;"
+              action="puntos">
+                  <input type="text" size="7" placeholder="Tus puntos">
+                  <label for=""><strong>Total</strong></label>
+              </form>
+            </td>
+          </tr>
+        
+    </table>
+        
+    <footer class="footer">
+    <div class="container">
+        <div class="card"> 
+        <h4>Refugio de abrazos</h4>
+        <div class="boton">
+          <button class="contacta" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> Contacta con Nosotros</button> 
+      </div>
+        <br>
+        <img src="./src/Images/Logo base blanco.png" width="100" height="100">
+        <br>
+      
+        <form class="form1" action="Register"> 
+          
+            <label for="Register">Nombre:</label>
+            <input type="text" placeholder="maria">
+            <br>
+            <br>
+          
+            <label for="Register">Apellido:</label>
+            <input type="text" placeholder="perez">
+            <br>
+            <br>
+            <label for="Register">Correo electronico:</label>
+            <input id="email" type="email" placeholder="123@gmail.com">
+            <br>
+            <br>
+            <label for="Register">Tú consulta:</label>
+            <input id="consulta" placeholder="text">
+            <br>
+            <br>
+          
+        <div class="boton">
+            <button class="enviar" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;">ENVIAR</button> 
+        </div>
+
+        </form>
+      <br>
+      <br>
+      </div>
+            <div class="card2"> 
+      <h4>
+          <div class="boton">
+            <button class="AVISO DE PRIVACIDAD" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> AVISO DE PRIVACIDAD </button> 
+        </div>
+          <br>
+          <br>
+          <br>
+          <div class="boton">
+            <button class="AVISO LEGAL" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> AVISO LEGAL </button> 
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="boton">
+            <button class="POLITICA DE COOKIES" style="background-color:rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> POLITICA DE COOKIES </button> 
+        </h4>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="https://www.pngkey.com/png/full/935-9352373_click-picture-click-icon-png-free.png " alt="manita de click" width="55" height="75">
+      
+      
+            </div>
+      
+          <div class="card3"> 
+        <p><h4>CUENTA CON NOSOTROS</h4></p>
+        <br>
+        <div class="iconos">
+        <img src="https://cdn2.iconfinder.com/data/icons/funky/64/Facebook-1-512.png" alt="face" width="auto" height="30">  
+        <img src="https://www.mappingmegan.com/wp-content/uploads/2017/01/twitter-logo-png-transparent-background-twitter-transparent-logo-png.png" alt="twitter" width="auto" height="30">
+        <img src="https://www.internetmatters.org/wp-content/uploads/2020/01/instagradientlogo-no-background.png" alt="insta" width="auto" height="30">
+      </div>
+      <br>
+        <br> <h6>
+        <p> <b>🌐Dirección:</b> <br>
+          Av. Alemania #55, <br>
+          Col. Las Europas <br>
+          cp.34567
+        <br>
+        <br>
+        <p> <b>📞Teléfono:</b> <br>
+          (52) 33456-7890</p>
+        <br>
+        <p> <b>💻 Email: <br>
+        </b>contact@refugiodeabrazos.org</p>
+        <br>
+        <a href="#contacto">Contacto</a> | <a href="#servicios">Servicios</a> | <a href="#nosotros">Sobre Nosotros</a>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+        <p>&copy; 2023 Centro Comunitario de Ayuda para Mujeres "REFUGIO DE ABRAZOS". </p>
+        </h6>
+        <br>
+        <footer class="footer">
+          <img class="logo" src="./src/Images/Logo base blanco.png" width="70" height="70"></footer>
+    </footer>
+
+</body>
+</html>
