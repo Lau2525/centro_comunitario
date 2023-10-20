@@ -82,14 +82,86 @@
             margin: 15px;
             justify-content:center; 
         }
-     /*Télefono*/
-     .grid-container{
+
+        /*FOOTER*/
+        .card{
+            background-color: rgb(240, 149, 213);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+    }
+
+           .card p{
+            text-align: justify;
+            padding-left: 25px;
+           }
+
+    .card2{
+            background-color: rgb(240, 149, 213);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+    }
+    .card2 p{
+            text-align: justify;
+            padding-left: 25px;
+        }
+        .card3{
+            background-color: rgb(240, 149, 213);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+    }
+    .card3 p{
+            text-align: justify;
+            padding-left: 10px;
+        }       
+         .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            width: 100%;
+    }
+    .button{
+      background-color: azure;
+      color: rgb(203, 164, 239);
+      padding: 10px 20px;
+      
+    }
+    .iconos{
+      display: flex;
+  align-items: center;
+  justify-content:space-between; 
+}
+@keyframes logo{
+                from{
+                    opacity: 1;
+                }
+                to{
+                    opacity: 0;
+                }
+
+                }
+        .logo{
+            animation-name: logo;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+   
+   
+        /*REPONSIVO*/
+        /*Télefono*/
+        .grid-container{
             display: grid;
             gap: 10px;
             grid-template-areas:
             "header"
             "navbar"
             "main"
+            "sidebar"
+            "tabla"
+            "tabla"
             "tabla"
             "footer";
         }
@@ -104,6 +176,8 @@
                 "header header"
                 "navbar navbar"
                 "sidebar main"
+                "tabla tabla"
+                "tabla tabla"
                 "tabla tabla"
                 "footer footer";
             }
@@ -120,9 +194,12 @@
                 "navbar navbar navbar"
                 "sidebar main main"
                 "sidebar tabla tabla"
+                "sidebar tabla tabla"
+                "sidebar tabla tabla"
                 "footer footer footer";
             }
-        }
+        }   
+
 
         /*animaciones*/
         @keyframes animacion {
@@ -214,6 +291,106 @@
         ></iframe>
       </article>
     </article>
-    <footer></footer>
+    <footer>
+       <footer class="footer">
+            <div class="container">
+                <div class="card"> 
+                <h4>Refugio de abrazos</h4>
+                <div class="boton">
+                  <button class="contacta" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> Contacta con Nosotros</button> 
+              </div>
+                <br>
+                <img src="./src/Images/Logo base blanco.png" width="100" height="100">
+                <br>
+              
+                <form class="form1" action="Register"> 
+                  
+                    <label for="Register">Nombre:</label>
+                    <input type="text" placeholder="maria">
+                    <br>
+                    <br>
+                  
+                    <label for="Register">Apellido:</label>
+                    <input type="text" placeholder="perez">
+                    <br>
+                    <br>
+                    <label for="Register">Correo electronico:</label>
+                    <input id="email" type="email" placeholder="123@gmail.com">
+                    <br>
+                    <br>
+                    <label for="Register">Tú consulta:</label>
+                    <input id="consulta" placeholder="text">
+                    <br>
+                    <br>
+                  
+                <div class="boton">
+                    <button class="enviar" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;">ENVIAR</button> 
+                </div>
+        
+                </form>
+              <br>
+              <br>
+              </div>
+                    <div class="card2"> 
+              <h4>
+                  <div class="boton">
+                    <button class="AVISO DE PRIVACIDAD" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> AVISO DE PRIVACIDAD </button> 
+                </div>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="boton">
+                    <button class="AVISO LEGAL" style="background-color: rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> AVISO LEGAL </button> 
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="boton">
+                    <button class="POLITICA DE COOKIES" style="background-color:rgb(210, 66, 232); color: blueviolet;padding: 10px 20px; border-radius: 10px;"> POLITICA DE COOKIES </button> 
+                </h4>
+                <br>
+                <br>
+                <br>
+                <br>
+                <img src="https://www.pngkey.com/png/full/935-9352373_click-picture-click-icon-png-free.png " alt="manita de click" width="55" height="75">
+              
+              
+                    </div>
+              
+                  <div class="card3"> 
+                <p><h4>CUENTA CON NOSOTROS</h4></p>
+                <br>
+                <div class="iconos">
+                <img src="https://cdn2.iconfinder.com/data/icons/funky/64/Facebook-1-512.png" alt="face" width="auto" height="30">  
+                <img src="https://www.mappingmegan.com/wp-content/uploads/2017/01/twitter-logo-png-transparent-background-twitter-transparent-logo-png.png" alt="twitter" width="auto" height="30">
+                <img src="https://www.internetmatters.org/wp-content/uploads/2020/01/instagradientlogo-no-background.png" alt="insta" width="auto" height="30">
+              </div>
+              <br>
+                <br> <h6>
+                <p> <b>🌐Dirección:</b> <br>
+                  Av. Alemania #55, <br>
+                  Col. Las Europas <br>
+                  cp.34567
+                <br>
+                <br>
+                <p> <b>📞Teléfono:</b> <br>
+                  (52) 33456-7890</p>
+                <br>
+                <p> <b>💻 Email: <br>
+                </b>contact@refugiodeabrazos.org</p>
+                <br>
+                <a href="#contacto">Contacto</a> | <a href="#servicios">Servicios</a> | <a href="#nosotros">Sobre Nosotros</a>
+              <br>
+              <br>
+              <br>
+              <br>
+              
+                <p>&copy; 2023 Centro Comunitario de Ayuda para Mujeres "REFUGIO DE ABRAZOS". </p>
+                </h6>
+                <br>
+                <footer class="footer">
+                  <img class="logo" src="./src/Images/Logo base blanco.png" width="70" height="70"></footer>
+
+    </footer>
   </body>
 </html>
